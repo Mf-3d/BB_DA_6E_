@@ -34,7 +34,7 @@ body {
 .avatar {
     margin-left: auto;
     margin-right: auto;
-    width: 8em;
+    width: 10em;
     /* Rounded border */
     border-radius: 50%;
     height: 100;
