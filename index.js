@@ -12,7 +12,25 @@ function getParam(name, url) {
 }
 
 if(version === 'dev') {
-    alert('ver.1.0.1 Develop Channel.');
+    if (type === 'card') {
+        var bg = getParam('bg');
+        var bgarea = document.getElementById("bg");
+        bgarea.style.backgroundImage = `url(${bg})`;
+        var username = getParam('username');
+        var namearea = document.getElementById("name");
+        namearea.innerHTML = username;
+        var bio = getParam('bio');
+        var bioarea = document.getElementById("bio");
+        bioarea.innerHTML = bio;
+        var hidearea = document.getElementById("hide")
+        hidearea.style.display = "none";
+        var image = getParam('img');
+        var imagearea = document.getElementById("avatar");
+        imagearea.innerHTML = `<img class="avatar__image" src="${image}" />`;
+    }
+    var verarea = document.getElementById("ver");
+    verarea.innerHTML = "ver.1.0.1 Developer Channel.";
+    verarea.style.color = "#ff0000";
 }
 
 if (type === 'card') {
