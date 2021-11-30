@@ -61,3 +61,43 @@ body {
     background-size: 150%;
     background-position-y: 0%;
 }
+
+.loading {
+  font-size: 1.3em;
+}
+
+.loading span {
+  font-size: 3em;
+  display: inline-block;
+  animation: r 2s infinite;
+  font-family: Arial, Helvetica, sans-serif;
+  transform-origin: center 49%;
+  transform: scale(100%);
+}
+ 
+@keyframes r {
+  0%   { 
+    transform: rotate(0deg); 
+    transform: scale(100% 100% 100%);
+  }
+  50% { 
+    transform: rotate(-235deg);
+    transform: scale(0% 0% 0%);
+  }
+  55% { 
+    transform: rotate(-235deg);
+    transform: scale(0% 0% 0%);
+  }
+  100% { 
+    transform: rotate(-360deg);
+    transform: scale(0% 0% 0%);
+  }
+}
+
+.circle {
+  width: 150px;
+  height: 150px; 
+  border-radius: 50%; 
+  margin: 0 auto;/* ←ブロック要素が左右に中央揃え */
+  border: solid rgb(0, 0, 0);
+}
